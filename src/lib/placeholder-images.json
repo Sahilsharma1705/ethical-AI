@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "scene-1",
+      "description": "A child crossing the road in front of a car.",
+      "imageUrl": "https://images.unsplash.com/photo-1576963483583-6ba7418fcfe3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGlsZCUyMGNyb3NzaW5nfGVufDB8fHx8MTc2MjUzMDcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child crossing"
+    },
+    {
+      "id": "scene-2",
+      "description": "A clear road ahead with a green traffic light.",
+      "imageUrl": "https://images.unsplash.com/photo-1630783204556-649cc187d778?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmVlbiUyMGxpZ2h0fGVufDB8fHx8MTc2MjUzMDcxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green light"
+    },
+    {
+      "id": "scene-3",
+      "description": "An obstacle on the road that requires the car to stop.",
+      "imageUrl": "https://images.unsplash.com/photo-1641569693189-48b44588743e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyb2FkJTIwb2JzdGFjbGV8ZW58MHx8fHwxNzYyNTMwNzE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "road obstacle"
+    },
+    {
+      "id": "scene-4",
+      "description": "A car stopped at a red light in the city.",
+      "imageUrl": "https://images.unsplash.com/photo-1632480338508-79bcc207479f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyZWQlMjBsaWdodHxlbnwwfHx8fDE3NjI1MzA3MTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "red light"
+    }
+  ]
 }
