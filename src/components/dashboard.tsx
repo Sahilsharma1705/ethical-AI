@@ -202,15 +202,15 @@ export default function Dashboard() {
   };
 
 
-  const getDecisionBadgeVariant = (decision: string | undefined) => {
+  const getDecisionBadgeInfo = (decision: string | undefined): { variant: "destructive" | "default" | "secondary" | "outline", className: string} => {
     switch (decision) {
       case 'Brake':
       case 'Stop':
-        return 'destructive';
+        return { variant: 'destructive', className: 'bg-[#EF4444]' };
       case 'Continue':
-        return 'default'
+        return { variant: 'default', className: 'bg-[#6EE7B7] text-black'};
       default:
-        return 'secondary';
+        return { variant: 'secondary', className: ''};
     }
   }
 
@@ -336,10 +336,10 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-background">
+    <div className="flex min-h-screen w-full flex-col bg-background font-sans">
       <header className="sticky top-0 z-10 flex h-[60px] items-center gap-4 border-b bg-card px-6">
-        <h1 className="text-xl font-semibold text-foreground">EthicalDriveAI</h1>
-        <p className="hidden md:block text-sm text-muted-foreground">Neuro-Symbolic Ethical Reasoning for Autonomous Vehicles</p>
+        <h1 className="text-xl font-semibold text-foreground">Neuro-Symbolic AI for Multimodal Ethical Reasoning</h1>
+        <p className="hidden md:block text-sm text-muted-foreground">in Autonomous Vehicles</p>
       </header>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
         <Tabs defaultValue="scenario" onValueChange={(value) => setAnalysisMode(value as AnalysisMode)}>
@@ -392,19 +392,24 @@ export default function Dashboard() {
                 )}
               </CardContent>
             </Card>
-              <Card className="bg-primary/5 border-primary/20">
+              <Card className="bg-card/50 border-primary/20">
               <CardHeader className="flex flex-row items-center justify-between">
                 <div className="grid gap-1.5">
                   <CardTitle>Decision & Justification</CardTitle>
                   <CardDescription>The final action and its ethical reasoning.</CardDescription>
                 </div>
-                <Zap className="h-6 w-6 text-accent" />
+                <Zap className="h-6 w-6 text-yellow-400" />
               </CardHeader>
               <CardContent className="grid gap-4">
                 <div className="flex items-baseline justify-between">
                     <span className="text-sm font-semibold text-muted-foreground">Decision</span>
                     {isLoading || !decision ? <Skeleton className="h-8 w-24" /> : 
-                      <Badge variant={getDecisionBadgeVariant(decision?.decision)} className="text-lg px-4 py-1">{decision?.decision}</Badge>
+                      <Badge 
+                        variant={getDecisionBadgeInfo(decision?.decision).variant} 
+                        className={`text-lg px-4 py-1 ${getDecisionBadgeInfo(decision?.decision).className}`}
+                      >
+                        {decision?.decision}
+                      </Badge>
                     }
                 </div>
                 <div className="flex items-baseline justify-between">
