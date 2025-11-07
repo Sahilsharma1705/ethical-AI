@@ -49,4 +49,16 @@ export const scenarios: Scenario[] = [
       context: 'A red light is active at the upcoming intersection.',
     },
   },
+    {
+    id: 'scenario-5',
+    name: 'Animal in Road',
+    description: 'An animal has darted into the road.',
+    imageId: 'scene-5',
+    perceptionData: {
+      objects: ['animal', 'car'],
+      positions: ['ahead', 'behind'],
+      signals: [],
+      context: 'An animal is on the road.',
+    },
+  },
 ];

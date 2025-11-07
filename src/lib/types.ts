@@ -1,4 +1,4 @@
-export type DetectedObject = 'pedestrian' | 'car' | 'obstacle' | 'traffic_light';
+export type DetectedObject = 'pedestrian' | 'car' | 'obstacle' | 'traffic_light' | 'animal';
 export type TrafficSignal = 'red_light' | 'green_light' | 'yellow_light';
 
 export type PerceptionData = {
@@ -17,7 +17,7 @@ export type Scenario = {
 };
 
 export type Decision = {
-  decision: 'Brake' | 'Continue' | 'Stop' | 'N/A';
+  decision: 'Brake' | 'Continue' | 'Stop' | 'N/A' | string;
   reason: string;
   confidence: number;
 }

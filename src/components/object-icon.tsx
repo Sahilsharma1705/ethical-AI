@@ -1,4 +1,4 @@
-import { CarFront, PersonStanding, TrafficCone } from 'lucide-react';
+import { CarFront, PersonStanding, TrafficCone, Dog } from 'lucide-react';
 import { TrafficLightIcon } from '@/components/icons/traffic-light-icon';
 import type { DetectedObject } from '@/lib/types';
 
@@ -17,6 +17,8 @@ export function ObjectIcon({ object, className }: ObjectIconProps) {
       return <TrafficLightIcon className={className} />;
     case 'obstacle':
         return <TrafficCone className={className} />;
+    case 'animal':
+        return <Dog className={className} />;
     default:
       return null;
   }

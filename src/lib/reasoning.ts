@@ -34,6 +34,15 @@ export function determineAction(perception: PerceptionData): Decision {
     };
   }
 
+  // Rule 4: Consider animal welfare.
+  if (objects.includes('animal')) {
+    return {
+      decision: 'Brake',
+      reason: 'Animal detected on the road. Braking to avoid collision.',
+      confidence: 0.90,
+    };
+  }
+
   // Default Rule: If no immediate threats, proceed with caution.
   if (signals.includes('green_light')) {
     return {
