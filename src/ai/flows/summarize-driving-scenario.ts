@@ -2,10 +2,6 @@
 
 /**
  * @fileOverview Summarizes the driving scenario from object detection data for ethical reasoning.
- *
- * - summarizeDrivingScenario - A function that summarizes the driving scenario.
- * - SummarizeDrivingScenarioInput - The input type for the summarizeDrivingScenario function.
- * - SummarizeDrivingScenarioOutput - The return type for the summarizeDrivingScenario function.
  */
 
 import {ai} from '@/ai/genkit';
@@ -42,14 +38,15 @@ const summarizeDrivingScenarioPrompt = ai.definePrompt({
   output: {schema: SummarizeDrivingScenarioOutputSchema},
   prompt: `You are an AI agent specializing in summarizing driving scenarios for ethical reasoning.
 
-  Given the following information about the driving scene, create a concise and human-readable summary of the ethical dilemma the car faces.
+  Given the following neuro-symbolic facts about the driving scene, create a concise and human-readable summary of the ethical dilemma or situation the car faces. Focus on clarity for a human auditor.
 
-  Objects: {{objects}}
-  Positions: {{positions}}
-  Signals: {{signals}}
-  Context: {{context}}
+  FACT_BASE:
+  - Detected Objects: {{#each objects}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
+  - Object Positions: {{#each positions}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
+  - Traffic Signals: {{#each signals}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
+  - Scene Context: {{{context}}}
 
-  Scenario Summary: `,
+  SCENARIO_SUMMARY: `,
 });
 
 const summarizeDrivingScenarioFlow = ai.defineFlow(

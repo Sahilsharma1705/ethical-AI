@@ -8,75 +8,72 @@ body {
 
 @layer base {
   :root {
-    --background: 220 15% 13%; /* Charcoal Gray */
-    --foreground: 220 14% 90%; /* Soft White */
+    --background: 222 16% 13%; /* #1C1F26 */
+    --foreground: 210 20% 92%; /* #E5E7EB */
     
-    --card: 222 16% 20%; /* Deep Graphite */
-    --card-foreground: 220 14% 90%; /* Soft White */
+    --card: 222 14% 19%; /* #2A2E37 */
+    --card-foreground: 210 20% 92%; /* #E5E7EB */
     
-    --popover: 222 16% 20%;
-    --popover-foreground: 220 14% 90%;
+    --popover: 222 14% 19%;
+    --popover-foreground: 210 20% 92%;
     
-    --primary: 217 91% 60%; /* Rich Steel Blue */
+    --primary: 217 91% 60%; /* #3B82F6 - Rich Steel Blue */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 10% 60%; /* Cool Gray */
-    --secondary-foreground: 220 14% 90%;
+    --secondary: 220 10% 60%; /* #9CA3AF - Cool Gray */
+    --secondary-foreground: 222 16% 13%;
 
-    --muted: 222 16% 25%;
+    --muted: 222 14% 25%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 217 91% 60%; /* Rich Steel Blue for accents */
-    --accent-foreground: 0 0% 98%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84% 60%; /* Muted Red */
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%; /* #EF4444 - Muted Red */
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 222 16% 28%;
-    --input: 222 16% 28%;
+    --border: 222 14% 28%;
+    --input: 222 14% 28%;
     --ring: 217 91% 60%;
     
-    --radius: 0.75rem; /* rounded-2xl maps to a larger radius */
+    --radius: 1rem; /* rounded-2xl */
 
     /* Custom colors from spec */
-    --safe-action: 158 70% 67%; /* Sage Green */
-    --risk-alert: 45 95% 58%; /* Amber Gold */
+    --safe-action: 158 70% 67%; /* #6EE7B7 - Sage Green */
+    --risk-alert: 45 95% 58%; /* #FBBF24 - Amber Gold */
   }
 
   .dark {
-    --background: 220 15% 13%; /* Charcoal Gray */
-    --foreground: 220 14% 90%; /* Soft White */
+    --background: 222 16% 13%;
+    --foreground: 210 20% 92%;
     
-    --card: 222 16% 20%; /* Deep Graphite */
-    --card-foreground: 220 14% 90%; /* Soft White */
+    --card: 222 14% 19%;
+    --card-foreground: 210 20% 92%;
     
-    --popover: 222 16% 20%;
-    --popover-foreground: 220 14% 90%;
+    --popover: 222 14% 19%;
+    --popover-foreground: 210 20% 92%;
     
-    --primary: 217 91% 60%; /* Rich Steel Blue */
+    --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 10% 60%; /* Cool Gray */
-    --secondary-foreground: 220 14% 90%;
+    --secondary: 220 10% 60%;
+    --secondary-foreground: 222 16% 13%;
 
-    --muted: 222 16% 25%;
+    --muted: 222 14% 25%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 217 91% 60%; /* Rich Steel Blue for accents */
-    --accent-foreground: 0 0% 98%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84% 60%; /* Muted Red */
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 222 16% 28%;
-    --input: 222 16% 28%;
+    --border: 222 14% 28%;
+    --input: 222 14% 28%;
     --ring: 217 91% 60%;
-    
-    --radius: 0.75rem;
 
-    /* Custom colors from spec */
-    --safe-action: 158 70% 67%; /* Sage Green */
-    --risk-alert: 45 95% 58%; /* Amber Gold */
+    --safe-action: 158 70% 67%;
+    --risk-alert: 45 95% 58%;
   }
 }
 
